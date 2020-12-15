@@ -42,3 +42,7 @@ data['start_date'] = pd.to_datetime(data['start_date'], format="%y/%m/%d, %H:%M:
 data['end_date'] = pd.to_datetime(data['end_date'], format="%y/%m/%d, %H:%M:%S")
 # new colun for duration of event
 data['duration'] = data['end_date'] - data['start_date']
+
+# basic plotting 
+plt.scatter(data['year'], data['disaster_type'], linewidth= 1)
+plt.scatter(data['start_date'], data['disaster_type'])
